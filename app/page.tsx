@@ -1,103 +1,114 @@
-import Image from "next/image";
+import React from 'react';
 
-export default function Home() {
+const ZendeskLogin = () => {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-white via-white via-78% to-[#d1f470] relative">
+      
+      <div className="bg-[#1f1f1f] text-white px-4 py-3 flex items-center justify-center relative">
+        <div className="flex items-center gap-2 text-sm">
+          <span className="font-semibold">Zendesk AI Summit 2025</span>
+          <span className="hidden sm:inline">|</span>
+          <span className="hidden sm:inline">
+            Join 20,000+ leaders at our biggest digital event to see how AI delivers resolutions at scale.
+          </span>
+          <a href="#register" className="underline hover:no-underline">Register now</a>
+        </div>
+        <a href="#" className="absolute text-3xl right-4 top-1/2 -translate-y-1/2 hover:bg-white/10 p-1 rounded">×</a>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      
+      <nav className="flex items-center justify-between px-6 py-4 border-b border-[#d8dcde]">
+        <div className="flex items-center">
+          <svg className="w-32 h-8" viewBox="0 0 160 40" fill="none">
+            <text x="40" y="25" className="fill-[#03363D]" fontSize="30" fontWeight="bold" fontFamily="Arial, sans-serif">
+              zendesk
+            </text>
+          </svg>
+        </div>
+        <div className="flex items-center gap-3">
+          <a href="#" className="px-6 py-2 bg-[#d1f470] text-[#03363D] rounded-lg font-medium hover:bg-[#d1f179] transition-colors">
+            Try for free
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="#" className="px-6 py-2 border border-[#03363D] text-[#03363D] rounded-lg font-medium hover:bg-[#e5e6e7] transition-colors">
+            View demo
+          </a>
+        </div>
+      </nav>
+
+      
+      <main className="flex flex-col items-center justify-center px-4 pt-20 pb-32">
+        <div className="w-full max-w-md">
+          <h1 className="text-4xl font-semibold text-[#000000] mb-8">
+            Sign in to Zendesk
+          </h1>
+
+          <div className="mb-6">
+            <label className="block font-semibold text-sm text-[#2f3941] mb-2">
+              yoursubdomain.zendesk.com
+            </label>
+            <div className="flex items-center bg-white rounded-lg border border-[#d8dcde] focus-within:border-[#03363D] focus-within:ring-2 focus-within:ring-[#03363D]/20">
+              <input
+                type="text"
+                className="flex-1 px-4 py-3 rounded-l-lg outline-none text-[#2f3941]"
+                placeholder="yoursubdomain"
+              />
+              <span className="px-4 py-3 block font-semibold text-[#68737d] bg-[#f8f9f9] rounded-r-lg border-l border-[#d8dcde]">
+                .zendesk.com
+              </span>
+            </div>
+            <a href="#" className="text-sm inline-block font-semibold underline text-[#03363D] hover:underline mt-2">
+              Forgot your subdomain?
+            </a>
+          </div>
+
+          <a href="#" className="w-full block text-center font-medium py-3 bg-[#d1f470] text-[#03363D] rounded-lg text-lg hover:bg-[#d1f179] transition-colors mb-3">
+            Sign in
+          </a>
+
+          <a href="#" className="w-full block text-center font-medium py-3 bg-white border-2 border-[#d8dcde] text-[#2f3941] rounded-lg text-lg hover:bg-[#e5e6e7] transition-colors">
+            New here? Start free trial
+          </a>
+        </div>
+
+        
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-16 text-sm">
+          <a href="#" className="text-[#03363D] block font-semibold underline hover:underline">
+            Sign in to Chat
+          </a>
+          <a href="#" className="text-[#03363D] block font-semibold underline hover:underline">
+            Sign in to Sell
+          </a>
+          <a href="#" className="text-[#03363D] block font-semibold underline hover:underline">
+            Sign in to Sunshine Conversations
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      
+      <footer className="absolute bottom-0 left-0 right-0 px-4 py-6 border-t border-[#d8dcde]">
+        <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-[#68737d]">
+          <a href="#" className="block text-[#03363D] font-semibold hover:text-[#8a8b8c] hover:underline">
+            Terms of Use
+          </a>
+          <a href="#" className="block text-[#03363D] font-semibold hover:text-[#8a8b8c] hover:underline">
+            Privacy Notice
+          </a>
+          <a href="#" className="block text-[#03363D] font-semibold hover:text-[#8a8b8c] hover:underline">
+            Cookie Notice
+          </a>
+          <a href="#" className="block text-[#03363D] font-semibold hover:text-[#8a8b8c] hover:underline">
+            Cookie settings
+          </a>
+          <a href="#" className="block text-[#03363D] font-semibold hover:text-[#8a8b8c] hover:underline">
+            Trust Center
+          </a>
+          <a href="#" className="block text-[#03363D] font-semibold hover:text-[#8a8b8c] hover:underline">
+            ©Zendesk 2025
+          </a>
+        </div>
       </footer>
     </div>
   );
-}
+};
+
+export default ZendeskLogin;
